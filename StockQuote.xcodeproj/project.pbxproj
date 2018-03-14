@@ -11,6 +11,12 @@
 		180ADC902058BCAB0076A652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180ADC8E2058BCAB0076A652 /* Main.storyboard */; };
 		180ADC922058BCAB0076A652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180ADC912058BCAB0076A652 /* Assets.xcassets */; };
 		180ADC952058BCAB0076A652 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180ADC932058BCAB0076A652 /* LaunchScreen.storyboard */; };
+		180ADCC92058DB980076A652 /* SampleBatchQuotesJSON.json in Resources */ = {isa = PBXBuildFile; fileRef = 180ADCC82058DB980076A652 /* SampleBatchQuotesJSON.json */; };
+		180ADCCA2058DD340076A652 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 180ADC962058BCAB0076A652 /* Info.plist */; };
+		180ADCCB2058DDC40076A652 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 180ADCA12058BCAB0076A652 /* Info.plist */; };
+		180ADCCF2058E6310076A652 /* BatchQuotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCCE2058E6310076A652 /* BatchQuotesTests.swift */; };
+		180ADCD12058E6620076A652 /* BatchQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCD02058E6620076A652 /* BatchQuotes.swift */; };
+		180ADCD32058E7C60076A652 /* Quote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCD22058E7C60076A652 /* Quote.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,11 +42,15 @@
 		180ADC8F2058BCAB0076A652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		180ADC912058BCAB0076A652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		180ADC942058BCAB0076A652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		180ADC962058BCAB0076A652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		180ADC962058BCAB0076A652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = StockQuote/Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		180ADC9B2058BCAB0076A652 /* StockQuoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockQuoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		180ADCA12058BCAB0076A652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		180ADCA62058BCAB0076A652 /* StockQuoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockQuoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		180ADCAC2058BCAB0076A652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		180ADCC82058DB980076A652 /* SampleBatchQuotesJSON.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = SampleBatchQuotesJSON.json; sourceTree = "<group>"; };
+		180ADCCE2058E6310076A652 /* BatchQuotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchQuotesTests.swift; sourceTree = "<group>"; };
+		180ADCD02058E6620076A652 /* BatchQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BatchQuotes.swift; sourceTree = "<group>"; };
+		180ADCD22058E7C60076A652 /* Quote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quote.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +132,8 @@
 		180ADCB82058D7500076A652 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				180ADCD02058E6620076A652 /* BatchQuotes.swift */,
+				180ADCD22058E7C60076A652 /* Quote.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -176,6 +188,7 @@
 		180ADCC22058D7F00076A652 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				180ADCCE2058E6310076A652 /* BatchQuotesTests.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -183,6 +196,7 @@
 		180ADCC52058D8190076A652 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				180ADCC82058DB980076A652 /* SampleBatchQuotesJSON.json */,
 				180ADCA12058BCAB0076A652 /* Info.plist */,
 			);
 			path = Resources;
@@ -260,6 +274,7 @@
 					};
 					180ADC9A2058BCAB0076A652 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 180ADC862058BCAB0076A652;
 					};
@@ -295,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180ADCCA2058DD340076A652 /* Info.plist in Resources */,
 				180ADC952058BCAB0076A652 /* LaunchScreen.storyboard in Resources */,
 				180ADC922058BCAB0076A652 /* Assets.xcassets in Resources */,
 				180ADC902058BCAB0076A652 /* Main.storyboard in Resources */,
@@ -305,6 +321,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180ADCCB2058DDC40076A652 /* Info.plist in Resources */,
+				180ADCC92058DB980076A652 /* SampleBatchQuotesJSON.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +340,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180ADCD12058E6620076A652 /* BatchQuotes.swift in Sources */,
+				180ADCD32058E7C60076A652 /* Quote.swift in Sources */,
 				180ADC8B2058BCAB0076A652 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -330,6 +350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180ADCCF2058E6310076A652 /* BatchQuotesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,7 +509,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QFVJ6KY7E2;
-				INFOPLIST_FILE = StockQuote/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StockQuote/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ganleyapps.StockQuote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -503,7 +524,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QFVJ6KY7E2;
-				INFOPLIST_FILE = StockQuote/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/StockQuote/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ganleyapps.StockQuote;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -517,12 +538,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QFVJ6KY7E2;
-				INFOPLIST_FILE = StockQuoteTests/Info.plist;
+				INFOPLIST_FILE = StockQuoteTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ganleyapps.StockQuoteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StockQuote.app/StockQuote";
@@ -534,9 +557,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QFVJ6KY7E2;
-				INFOPLIST_FILE = StockQuoteTests/Info.plist;
+				INFOPLIST_FILE = StockQuoteTests/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ganleyapps.StockQuoteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
