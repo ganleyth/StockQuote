@@ -8,12 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		180ADC8B2058BCAB0076A652 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADC8A2058BCAB0076A652 /* AppDelegate.swift */; };
-		180ADC8D2058BCAB0076A652 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADC8C2058BCAB0076A652 /* ViewController.swift */; };
 		180ADC902058BCAB0076A652 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180ADC8E2058BCAB0076A652 /* Main.storyboard */; };
 		180ADC922058BCAB0076A652 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180ADC912058BCAB0076A652 /* Assets.xcassets */; };
 		180ADC952058BCAB0076A652 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180ADC932058BCAB0076A652 /* LaunchScreen.storyboard */; };
-		180ADCA02058BCAB0076A652 /* StockQuoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADC9F2058BCAB0076A652 /* StockQuoteTests.swift */; };
-		180ADCAB2058BCAB0076A652 /* StockQuoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCAA2058BCAB0076A652 /* StockQuoteUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,16 +33,13 @@
 /* Begin PBXFileReference section */
 		180ADC872058BCAB0076A652 /* StockQuote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StockQuote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		180ADC8A2058BCAB0076A652 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		180ADC8C2058BCAB0076A652 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		180ADC8F2058BCAB0076A652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		180ADC912058BCAB0076A652 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		180ADC942058BCAB0076A652 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		180ADC962058BCAB0076A652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		180ADC9B2058BCAB0076A652 /* StockQuoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockQuoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		180ADC9F2058BCAB0076A652 /* StockQuoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuoteTests.swift; sourceTree = "<group>"; };
 		180ADCA12058BCAB0076A652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		180ADCA62058BCAB0076A652 /* StockQuoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockQuoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		180ADCAA2058BCAB0076A652 /* StockQuoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockQuoteUITests.swift; sourceTree = "<group>"; };
 		180ADCAC2058BCAB0076A652 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,12 +91,12 @@
 		180ADC892058BCAB0076A652 /* StockQuote */ = {
 			isa = PBXGroup;
 			children = (
-				180ADC8A2058BCAB0076A652 /* AppDelegate.swift */,
-				180ADC8C2058BCAB0076A652 /* ViewController.swift */,
-				180ADC8E2058BCAB0076A652 /* Main.storyboard */,
-				180ADC912058BCAB0076A652 /* Assets.xcassets */,
-				180ADC932058BCAB0076A652 /* LaunchScreen.storyboard */,
-				180ADC962058BCAB0076A652 /* Info.plist */,
+				180ADCBD2058D7AA0076A652 /* UI */,
+				180ADCBB2058D76E0076A652 /* Common */,
+				180ADCB82058D7500076A652 /* Model */,
+				180ADCB92058D75C0076A652 /* Views */,
+				180ADCBA2058D7640076A652 /* Controllers */,
+				180ADCBC2058D7770076A652 /* Resources */,
 			);
 			path = StockQuote;
 			sourceTree = "<group>";
@@ -110,8 +104,9 @@
 		180ADC9E2058BCAB0076A652 /* StockQuoteTests */ = {
 			isa = PBXGroup;
 			children = (
-				180ADC9F2058BCAB0076A652 /* StockQuoteTests.swift */,
-				180ADCA12058BCAB0076A652 /* Info.plist */,
+				180ADCC22058D7F00076A652 /* Model */,
+				180ADCC02058D7EC0076A652 /* Controllers */,
+				180ADCC52058D8190076A652 /* Resources */,
 			);
 			path = StockQuoteTests;
 			sourceTree = "<group>";
@@ -119,10 +114,78 @@
 		180ADCA92058BCAB0076A652 /* StockQuoteUITests */ = {
 			isa = PBXGroup;
 			children = (
-				180ADCAA2058BCAB0076A652 /* StockQuoteUITests.swift */,
 				180ADCAC2058BCAB0076A652 /* Info.plist */,
 			);
 			path = StockQuoteUITests;
+			sourceTree = "<group>";
+		};
+		180ADCB82058D7500076A652 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		180ADCB92058D75C0076A652 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		180ADCBA2058D7640076A652 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		180ADCBB2058D76E0076A652 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				180ADC8A2058BCAB0076A652 /* AppDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		180ADCBC2058D7770076A652 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				180ADC912058BCAB0076A652 /* Assets.xcassets */,
+				180ADC962058BCAB0076A652 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		180ADCBD2058D7AA0076A652 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				180ADC8E2058BCAB0076A652 /* Main.storyboard */,
+				180ADC932058BCAB0076A652 /* LaunchScreen.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		180ADCC02058D7EC0076A652 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		180ADCC22058D7F00076A652 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		180ADCC52058D8190076A652 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				180ADCA12058BCAB0076A652 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +322,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180ADC8D2058BCAB0076A652 /* ViewController.swift in Sources */,
 				180ADC8B2058BCAB0076A652 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,7 +330,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180ADCA02058BCAB0076A652 /* StockQuoteTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +337,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				180ADCAB2058BCAB0076A652 /* StockQuoteUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
