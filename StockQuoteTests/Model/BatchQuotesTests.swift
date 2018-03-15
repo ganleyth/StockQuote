@@ -20,15 +20,15 @@ class BatchQuoteTests: XCTestCase {
             let data = try Data(contentsOf: URL(fileURLWithPath: sampleDataPath))
             batchQuotesResponse = try JSONDecoder().decode(BatchQuotesResponse.self, from: data)
         } catch {
-            print("Error converting sample JSON to Data: \(error.localizedDescription)")
-            XCTFail()
+            XCTFail(error.localizedDescription)
             return
         }
         
         let quotes = batchQuotesResponse.quotes
         
-        
-        
+        validate(quote: quotes[0], withSymbol: "MSFT", andPrice: 94.42)
+        validate(quote: quotes[1], withSymbol: "FB", andPrice: 181.91)
+        validate(quote: quotes[2], withSymbol: "AAPL", andPrice: 179.96)
     }
     
 }
@@ -37,8 +37,7 @@ class BatchQuoteTests: XCTestCase {
 private extension BatchQuoteTests {
     
     func validate(quote: Quote, withSymbol symbol: String, andPrice price: Double) {
-        
+        XCTAssertEqual(quote.symbol, symbol)
+        XCTAssertEqual(quote.price, price, accuracy: 0.01)
     }
-    
-    
 }
