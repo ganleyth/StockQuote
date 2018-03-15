@@ -18,7 +18,18 @@ class NetworkControllerTests: XCTestCase {
             "param2": "value2"
         ]
         
-        guard let url = NetworkController.url(byAdding: params, to: baseURL) else { XCTFail(); return }
+        guard let url = NetworkController.url(byAdding: params, to: baseURL),
+            let components = URLComponents(url: url, resolvingAgainstBaseURL: false) else { XCTFail(); return }
+        
+        let returnedHost = components.host
+        
+        guard let returnedQueryItems = components.queryItems else { XCTFail(); return }
+        var returnedParams: [String: String] = [:]
+        returnedQueryItems.forEach({ returnedParams[$0.name] = $0.value })
+        
+        XCTAssertEqual(returnedHost, "testURL.com")
+        XCTAssertEqual(returnedParams["param1"], "value1")
+        XCTAssertEqual(returnedParams["param2"], "value2")
     }
     
 }

@@ -11,8 +11,11 @@ import Foundation
 class NetworkController {
     
     static func url(byAdding params: [String: String]?, to baseURL: URL) -> URL? {
+        let queryItems = params?.map({ URLQueryItem(name: $0.key, value: $0.value) })
+        var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: false)
+        components?.queryItems = queryItems
         
-        return baseURL
+        return components?.url
     }
     
 }
