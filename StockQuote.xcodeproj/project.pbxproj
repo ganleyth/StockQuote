@@ -22,6 +22,7 @@
 		180ADCD9205A2E540076A652 /* QuoteControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCD8205A2E540076A652 /* QuoteControllerTests.swift */; };
 		180ADCDB205A2E650076A652 /* QuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCDA205A2E650076A652 /* QuoteController.swift */; };
 		180ADCDD205B55C40076A652 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCDC205B55C40076A652 /* Constants.swift */; };
+		180ADCDF205B5F7D0076A652 /* StockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCDE205B5F7D0076A652 /* StockListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		180ADCD8205A2E540076A652 /* QuoteControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteControllerTests.swift; sourceTree = "<group>"; };
 		180ADCDA205A2E650076A652 /* QuoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteController.swift; sourceTree = "<group>"; };
 		180ADCDC205B55C40076A652 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		180ADCDE205B5F7D0076A652 /* StockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			children = (
 				180ADCD6205A04660076A652 /* NetworkController.swift */,
 				180ADCDA205A2E650076A652 /* QuoteController.swift */,
+				180ADCDE205B5F7D0076A652 /* StockListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -361,6 +364,7 @@
 				180ADCD32058E7C60076A652 /* Quote.swift in Sources */,
 				180ADC8B2058BCAB0076A652 /* AppDelegate.swift in Sources */,
 				180ADCDD205B55C40076A652 /* Constants.swift in Sources */,
+				180ADCDF205B5F7D0076A652 /* StockListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
