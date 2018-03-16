@@ -23,6 +23,8 @@
 		180ADCDB205A2E650076A652 /* QuoteController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCDA205A2E650076A652 /* QuoteController.swift */; };
 		180ADCDD205B55C40076A652 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCDC205B55C40076A652 /* Constants.swift */; };
 		180ADCDF205B5F7D0076A652 /* StockListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCDE205B5F7D0076A652 /* StockListViewController.swift */; };
+		180ADCE1205B61930076A652 /* StockListInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCE0205B61930076A652 /* StockListInteractorTests.swift */; };
+		180ADCE5205B64840076A652 /* StockListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCE4205B64840076A652 /* StockListInteractor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		180ADCDA205A2E650076A652 /* QuoteController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteController.swift; sourceTree = "<group>"; };
 		180ADCDC205B55C40076A652 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		180ADCDE205B5F7D0076A652 /* StockListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListViewController.swift; sourceTree = "<group>"; };
+		180ADCE0205B61930076A652 /* StockListInteractorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListInteractorTests.swift; sourceTree = "<group>"; };
+		180ADCE4205B64840076A652 /* StockListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListInteractor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +167,7 @@
 				180ADCD6205A04660076A652 /* NetworkController.swift */,
 				180ADCDA205A2E650076A652 /* QuoteController.swift */,
 				180ADCDE205B5F7D0076A652 /* StockListViewController.swift */,
+				180ADCE4205B64840076A652 /* StockListInteractor.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -199,6 +204,7 @@
 			children = (
 				180ADCD4205A034D0076A652 /* NetworkControllerTests.swift */,
 				180ADCD8205A2E540076A652 /* QuoteControllerTests.swift */,
+				180ADCE0205B61930076A652 /* StockListInteractorTests.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -365,6 +371,7 @@
 				180ADC8B2058BCAB0076A652 /* AppDelegate.swift in Sources */,
 				180ADCDD205B55C40076A652 /* Constants.swift in Sources */,
 				180ADCDF205B5F7D0076A652 /* StockListViewController.swift in Sources */,
+				180ADCE5205B64840076A652 /* StockListInteractor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -375,6 +382,7 @@
 				180ADCD5205A034D0076A652 /* NetworkControllerTests.swift in Sources */,
 				180ADCCF2058E6310076A652 /* BatchQuotesTests.swift in Sources */,
 				180ADCD9205A2E540076A652 /* QuoteControllerTests.swift in Sources */,
+				180ADCE1205B61930076A652 /* StockListInteractorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
