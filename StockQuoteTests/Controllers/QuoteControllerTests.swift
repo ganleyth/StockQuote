@@ -34,6 +34,20 @@ class QuoteControllerTests: XCTestCase {
         wait(for: [expection], timeout: 1.0)
     }
     
+    func test_WhenFetchingStockDetails_ProperStockIsReturned() {
+        let bundle = Bundle(for: type(of: self))
+        guard let sampleDataPath = bundle.path(forResource: "SampleBatchQuotesJSON", ofType: "json") else { XCTFail(); return }
+        let data = try? Data(contentsOf: URL(fileURLWithPath: sampleDataPath))
+        
+        let networkController = MockNetworkController(data: data, error: nil)
+        sut.networkController = networkController
+        
+        let expectation = XCTestExpectation()
+        sut.fetchQuoteDetails(forSymbol: "MSFT") { (quote) in
+            
+        }
+    }
+    
 }
 
 extension QuoteControllerTests {

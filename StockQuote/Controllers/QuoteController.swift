@@ -45,6 +45,10 @@ class QuoteController {
             }
         }
     }
+    
+    func fetchQuoteDetails(forSymbol symbol: String, completion: @escaping (Quote?) -> Void) {
+        
+    }
 }
 
 protocol NetworkControllerProtocol {
