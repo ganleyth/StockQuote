@@ -36,16 +36,25 @@ class QuoteControllerTests: XCTestCase {
     
     func test_WhenFetchingStockDetails_ProperStockIsReturned() {
         let bundle = Bundle(for: type(of: self))
-        guard let sampleDataPath = bundle.path(forResource: "SampleBatchQuotesJSON", ofType: "json") else { XCTFail(); return }
+        guard let sampleDataPath = bundle.path(forResource: "SampleStockDetail", ofType: "json") else { XCTFail(); return }
         let data = try? Data(contentsOf: URL(fileURLWithPath: sampleDataPath))
         
         let networkController = MockNetworkController(data: data, error: nil)
         sut.networkController = networkController
         
+        let quote = Quote(symbol: "MSFT", priceString: "94.23")
+        
         let expectation = XCTestExpectation()
-        sut.fetchQuoteDetails(forSymbol: "MSFT") { (quote) in
+        sut.fetchQuoteDetails(for: quote) { (updatedQuote) in
+            XCTAssertEqual(updatedQuote.high, 94.33, accuracy: 0.01)
+            XCTAssertEqual(updatedQuote.low, 94.17, accuracy: 0.01)
+            XCTAssertEqual(updatedQuote.open, 94.26, accuracy: 0.01)
+            XCTAssertEqual(updatedQuote.close, 94.18, accuracy: 0.01)
             
+            expectation.fulfill()
         }
+        
+        wait(for: [expectation], timeout: 1.0)
     }
     
 }

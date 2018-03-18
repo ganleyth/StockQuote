@@ -46,8 +46,40 @@ class QuoteController {
         }
     }
     
-    func fetchQuoteDetails(forSymbol symbol: String, completion: @escaping (Quote?) -> Void) {
+    func fetchQuoteDetails(for quote: Quote, completion: @escaping (Quote) -> Void) {
         
+        let urlParameters = [
+            Constants.NetworkController.functionKey: Constants.NetworkController.timeSeriesFunction,
+            Constants.NetworkController.symbolKey: quote.symbol,
+            Constants.NetworkController.intervalKey: Constants.NetworkController.oneMin,
+            Constants.NetworkController.outputSizeKey: Constants.NetworkController.compact,
+            Constants.NetworkController.apiKeyKey: Constants.NetworkController.apiKey
+        ]
+        
+        guard let baseURL = URL(string: Constants.NetworkController.baseURL),
+            let url = networkController.url(byAdding: urlParameters, to: baseURL) else { completion(quote); return }
+        
+        networkController.performGETRequest(for: url) { (data, error) in
+            var returnQuote = quote
+            defer { completion(returnQuote) }
+            
+            if let error = error { print("Error fetching stock details: \(error.localizedDescription)"); return }
+            guard let data = data,
+                let topJSON = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)) as? [String: Any],
+                let timeSeriesDict = topJSON["Time Series (1min)"] as? [String: Any] else { print("Could not parse returned data."); return }
+            
+            var latestQuote: [String: String] = [:]
+            var latestTime: String = ""
+            for (key, value) in timeSeriesDict {
+                if key > latestTime {
+                    guard let d = value as? [String: String] else { continue }
+                    latestTime = key
+                    latestQuote = d
+                }
+            }
+            
+            returnQuote.update(withDetailsDict: latestQuote)
+        }
     }
 }
 
