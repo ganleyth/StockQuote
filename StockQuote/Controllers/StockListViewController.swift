@@ -40,6 +40,7 @@ class StockListViewController: UIViewController {
             })
             
             destVC.quote = quote
+            tableView.deselectRow(at: indexPath, animated: false)
         }
     }
 }

@@ -6,7 +6,7 @@
 //  Copyright © 2018 Thomas Ganley. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class NetworkController {
     
@@ -15,8 +15,10 @@ class NetworkController {
     lazy var session: SessionProtocol = URLSession.shared
     
     func performGETRequest(for url: URL, completion: @escaping (Data?, Error?) -> Void) {
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         session.dataTask(with: url) { (data, _, error) in
             completion(data, error)
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         }.resume()
     }
     

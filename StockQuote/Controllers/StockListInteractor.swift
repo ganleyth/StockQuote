@@ -8,7 +8,9 @@
 
 import UIKit
 
-class StockListInteractor: NSObject, UITableViewDataSource {
+class StockListInteractor: NSObject {}
+
+extension StockListInteractor: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return QuoteController.shared.quotes?.count ?? 0
