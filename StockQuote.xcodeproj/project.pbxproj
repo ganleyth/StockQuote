@@ -27,6 +27,7 @@
 		180ADCE5205B64840076A652 /* StockListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCE4205B64840076A652 /* StockListInteractor.swift */; };
 		180ADCE7205B80650076A652 /* SampleStockDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = 180ADCE6205B80650076A652 /* SampleStockDetail.json */; };
 		180ADCE9205B81DC0076A652 /* QuoteDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCE8205B81DC0076A652 /* QuoteDetailsTests.swift */; };
+		18B7BBBD205ECF7400D05040 /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7BBBC205ECF7400D05040 /* StockDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		180ADCE4205B64840076A652 /* StockListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockListInteractor.swift; sourceTree = "<group>"; };
 		180ADCE6205B80650076A652 /* SampleStockDetail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleStockDetail.json; sourceTree = "<group>"; };
 		180ADCE8205B81DC0076A652 /* QuoteDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailsTests.swift; sourceTree = "<group>"; };
+		18B7BBBC205ECF7400D05040 /* StockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 				180ADCDA205A2E650076A652 /* QuoteController.swift */,
 				180ADCDE205B5F7D0076A652 /* StockListViewController.swift */,
 				180ADCE4205B64840076A652 /* StockListInteractor.swift */,
+				18B7BBBC205ECF7400D05040 /* StockDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				180ADCDB205A2E650076A652 /* QuoteController.swift in Sources */,
 				180ADCD7205A04660076A652 /* NetworkController.swift in Sources */,
 				180ADCD12058E6620076A652 /* BatchQuotes.swift in Sources */,
+				18B7BBBD205ECF7400D05040 /* StockDetailViewController.swift in Sources */,
 				180ADCD32058E7C60076A652 /* Quote.swift in Sources */,
 				180ADC8B2058BCAB0076A652 /* AppDelegate.swift in Sources */,
 				180ADCDD205B55C40076A652 /* Constants.swift in Sources */,

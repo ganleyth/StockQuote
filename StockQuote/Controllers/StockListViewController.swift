@@ -26,4 +26,20 @@ class StockListViewController: UIViewController {
             this.tableView.reloadData()
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            guard let destVC = segue.destination as? StockDetailViewController,
+                let indexPath = tableView.indexPathForSelectedRow,
+                let quote = QuoteController.shared.quotes?[indexPath.row]  else { return }
+            
+            QuoteController.shared.fetchQuoteDetails(for: quote, completion: { (returnQuote) in
+                DispatchQueue.main.async {
+                    destVC.quote = returnQuote
+                }
+            })
+            
+            destVC.quote = quote
+        }
+    }
 }
