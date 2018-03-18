@@ -18,7 +18,7 @@ class NetworkController {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         session.dataTask(with: url) { (data, _, error) in
             completion(data, error)
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
+            DispatchQueue.main.async { UIApplication.shared.isNetworkActivityIndicatorVisible = false }
         }.resume()
     }
     

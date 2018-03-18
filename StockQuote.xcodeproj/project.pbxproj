@@ -28,6 +28,8 @@
 		180ADCE7205B80650076A652 /* SampleStockDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = 180ADCE6205B80650076A652 /* SampleStockDetail.json */; };
 		180ADCE9205B81DC0076A652 /* QuoteDetailsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180ADCE8205B81DC0076A652 /* QuoteDetailsTests.swift */; };
 		18B7BBBD205ECF7400D05040 /* StockDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7BBBC205ECF7400D05040 /* StockDetailViewController.swift */; };
+		18B7BBBF205ED87600D05040 /* SegueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7BBBE205ED87600D05040 /* SegueTests.swift */; };
+		18B7BBC1205EE09B00D05040 /* TableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B7BBC0205EE09B00D05040 /* TableViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +75,8 @@
 		180ADCE6205B80650076A652 /* SampleStockDetail.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleStockDetail.json; sourceTree = "<group>"; };
 		180ADCE8205B81DC0076A652 /* QuoteDetailsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteDetailsTests.swift; sourceTree = "<group>"; };
 		18B7BBBC205ECF7400D05040 /* StockDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockDetailViewController.swift; sourceTree = "<group>"; };
+		18B7BBBE205ED87600D05040 /* SegueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegueTests.swift; sourceTree = "<group>"; };
+		18B7BBC0205EE09B00D05040 /* TableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +151,8 @@
 			isa = PBXGroup;
 			children = (
 				180ADCAC2058BCAB0076A652 /* Info.plist */,
+				18B7BBBE205ED87600D05040 /* SegueTests.swift */,
+				18B7BBC0205EE09B00D05040 /* TableViewTests.swift */,
 			);
 			path = StockQuoteUITests;
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 					};
 					180ADCA52058BCAB0076A652 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 180ADC862058BCAB0076A652;
 					};
@@ -402,6 +409,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B7BBBF205ED87600D05040 /* SegueTests.swift in Sources */,
+				18B7BBC1205EE09B00D05040 /* TableViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -618,12 +627,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QFVJ6KY7E2;
 				INFOPLIST_FILE = StockQuoteUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ganleyapps.StockQuoteUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = StockQuote;
@@ -634,6 +645,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QFVJ6KY7E2;
 				INFOPLIST_FILE = StockQuoteUITests/Info.plist;
